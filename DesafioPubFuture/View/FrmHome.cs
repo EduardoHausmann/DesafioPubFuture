@@ -41,16 +41,22 @@ namespace View
         private void btnReceitaCadastro_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Cadastro de Receitas";
+            FrmCadastroReceita cadastroReceita = new FrmCadastroReceita();
+            AbrirTelaFilha(cadastroReceita);
         }
 
         private void btnReceitaLista_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Lista de Receitas";
+            FrmListaReceita listaReceita = new FrmListaReceita();
+            AbrirTelaFilha(listaReceita);
         }
 
         private void btnReceitaListaTotal_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Total de Receitas";
+            FrmTotalReceita totalReceita = new FrmTotalReceita();
+            AbrirTelaFilha(totalReceita);
         }
         #endregion
 
@@ -58,16 +64,22 @@ namespace View
         private void btnDespesaCadastro_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Cadastro de Despesas";
+            FrmCadastroDespesa cadastroDespesa = new FrmCadastroDespesa();
+            AbrirTelaFilha(cadastroDespesa);
         }
 
         private void btnDespesaLista_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Lista de Despesas";
+            FrmListaDespesa listaDespesa = new FrmListaDespesa();
+            AbrirTelaFilha(listaDespesa);
         }
 
         private void btnDespesaListaTotal_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Total de Despesas";
+            lblTitulo.Text = "Total de Despesas"; 
+            FrmTotalDespesa totalDespesa = new FrmTotalDespesa();
+            AbrirTelaFilha(totalDespesa);
         }
         #endregion
 
@@ -75,21 +87,29 @@ namespace View
         private void btnContaCadastro_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Cadastro de Contas";
+            FrmCadastroConta cadastroConta = new FrmCadastroConta();
+            AbrirTelaFilha(cadastroConta);
         }
 
         private void btnContaLista_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Lista de Contas";
+            FrmListaConta listaConta = new FrmListaConta();
+            AbrirTelaFilha(listaConta);
         }
 
         private void btnContaListaSaldoTotal_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Saldo Total das Contas";
+            FrmSaldoTotalConta saldoTotalConta = new FrmSaldoTotalConta();
+            AbrirTelaFilha(saldoTotalConta);
         }
 
         private void btnContaTransferiSaldo_Click(object sender, EventArgs e)
         {
             lblTitulo.Text = "Transferência de Saldo Entre Contas";
+            FrmTranfereSaldoConta tranfereSaldoConta = new FrmTranfereSaldoConta();
+            AbrirTelaFilha(tranfereSaldoConta);
         }
         #endregion
 
