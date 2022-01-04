@@ -46,11 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmCadastroConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroConta.Designer.cs">
+      <DependentUpon>FrmCadastroConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroDespesa.Designer.cs">
+      <DependentUpon>FrmCadastroDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastroReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastroReceita.Designer.cs">
+      <DependentUpon>FrmCadastroReceita.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmHome.Designer.cs">
       <DependentUpon>FrmHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaConta.Designer.cs">
+      <DependentUpon>FrmListaConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaDespesa.Designer.cs">
+      <DependentUpon>FrmListaDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmListaReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmListaReceita.Designer.cs">
+      <DependentUpon>FrmListaReceita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSaldoTotalConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSaldoTotalConta.Designer.cs">
+      <DependentUpon>FrmSaldoTotalConta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTotalDespesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTotalDespesa.Designer.cs">
+      <DependentUpon>FrmTotalDespesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTotalReceita.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTotalReceita.Designer.cs">
+      <DependentUpon>FrmTotalReceita.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTranfereSaldoConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTranfereSaldoConta.Designer.cs">
+      <DependentUpon>FrmTranfereSaldoConta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

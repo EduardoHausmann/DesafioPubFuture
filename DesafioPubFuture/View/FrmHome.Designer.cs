@@ -33,7 +33,7 @@ namespace View
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.pnlContaSubMenu = new System.Windows.Forms.Panel();
-            this.btnContaTransferiSaldo = new System.Windows.Forms.Button();
+            this.btnContaTransfereSaldo = new System.Windows.Forms.Button();
             this.btnContaListaSaldoTotal = new System.Windows.Forms.Button();
             this.btnContaLista = new System.Windows.Forms.Button();
             this.btnContaCadastro = new System.Windows.Forms.Button();
@@ -94,7 +94,7 @@ namespace View
             // 
             // pnlContaSubMenu
             // 
-            this.pnlContaSubMenu.Controls.Add(this.btnContaTransferiSaldo);
+            this.pnlContaSubMenu.Controls.Add(this.btnContaTransfereSaldo);
             this.pnlContaSubMenu.Controls.Add(this.btnContaListaSaldoTotal);
             this.pnlContaSubMenu.Controls.Add(this.btnContaLista);
             this.pnlContaSubMenu.Controls.Add(this.btnContaCadastro);
@@ -104,22 +104,22 @@ namespace View
             this.pnlContaSubMenu.Size = new System.Drawing.Size(233, 184);
             this.pnlContaSubMenu.TabIndex = 0;
             // 
-            // btnContaTransferiSaldo
+            // btnContaTransfereSaldo
             // 
-            this.btnContaTransferiSaldo.BackColor = System.Drawing.SystemColors.Control;
-            this.btnContaTransferiSaldo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnContaTransferiSaldo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnContaTransferiSaldo.FlatAppearance.BorderSize = 0;
-            this.btnContaTransferiSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContaTransferiSaldo.Location = new System.Drawing.Point(0, 135);
-            this.btnContaTransferiSaldo.Name = "btnContaTransferiSaldo";
-            this.btnContaTransferiSaldo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
-            this.btnContaTransferiSaldo.Size = new System.Drawing.Size(233, 45);
-            this.btnContaTransferiSaldo.TabIndex = 12;
-            this.btnContaTransferiSaldo.Text = "Transferir Saldo Entre Contas";
-            this.btnContaTransferiSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnContaTransferiSaldo.UseVisualStyleBackColor = false;
-            this.btnContaTransferiSaldo.Click += new System.EventHandler(this.btnContaTransferiSaldo_Click);
+            this.btnContaTransfereSaldo.BackColor = System.Drawing.SystemColors.Control;
+            this.btnContaTransfereSaldo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnContaTransfereSaldo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContaTransfereSaldo.FlatAppearance.BorderSize = 0;
+            this.btnContaTransfereSaldo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContaTransfereSaldo.Location = new System.Drawing.Point(0, 135);
+            this.btnContaTransfereSaldo.Name = "btnContaTransfereSaldo";
+            this.btnContaTransfereSaldo.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
+            this.btnContaTransfereSaldo.Size = new System.Drawing.Size(233, 45);
+            this.btnContaTransfereSaldo.TabIndex = 12;
+            this.btnContaTransfereSaldo.Text = "Transferência de Saldo Entre Contas";
+            this.btnContaTransfereSaldo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContaTransfereSaldo.UseVisualStyleBackColor = false;
+            this.btnContaTransfereSaldo.Click += new System.EventHandler(this.btnContaTransferiSaldo_Click);
             // 
             // btnContaListaSaldoTotal
             // 
@@ -132,7 +132,7 @@ namespace View
             this.btnContaListaSaldoTotal.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnContaListaSaldoTotal.Size = new System.Drawing.Size(233, 45);
             this.btnContaListaSaldoTotal.TabIndex = 11;
-            this.btnContaListaSaldoTotal.Text = "Listar Saldo Total";
+            this.btnContaListaSaldoTotal.Text = "Saldo Total das Contas";
             this.btnContaListaSaldoTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContaListaSaldoTotal.UseVisualStyleBackColor = true;
             this.btnContaListaSaldoTotal.Click += new System.EventHandler(this.btnContaListaSaldoTotal_Click);
@@ -148,7 +148,7 @@ namespace View
             this.btnContaLista.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnContaLista.Size = new System.Drawing.Size(233, 45);
             this.btnContaLista.TabIndex = 10;
-            this.btnContaLista.Text = "Listar Contas";
+            this.btnContaLista.Text = "Lista de Contas";
             this.btnContaLista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContaLista.UseVisualStyleBackColor = true;
             this.btnContaLista.Click += new System.EventHandler(this.btnContaLista_Click);
@@ -164,7 +164,7 @@ namespace View
             this.btnContaCadastro.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnContaCadastro.Size = new System.Drawing.Size(233, 45);
             this.btnContaCadastro.TabIndex = 9;
-            this.btnContaCadastro.Text = "Cadastrar";
+            this.btnContaCadastro.Text = "Cadastro";
             this.btnContaCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnContaCadastro.UseVisualStyleBackColor = true;
             this.btnContaCadastro.Click += new System.EventHandler(this.btnContaCadastro_Click);
@@ -209,7 +209,7 @@ namespace View
             this.btnDespesaListaTotal.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnDespesaListaTotal.Size = new System.Drawing.Size(233, 45);
             this.btnDespesaListaTotal.TabIndex = 7;
-            this.btnDespesaListaTotal.Text = "Listar Total de Despesas";
+            this.btnDespesaListaTotal.Text = "Total de Despesas";
             this.btnDespesaListaTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDespesaListaTotal.UseVisualStyleBackColor = true;
             this.btnDespesaListaTotal.Click += new System.EventHandler(this.btnDespesaListaTotal_Click);
@@ -225,7 +225,7 @@ namespace View
             this.btnDespesaLista.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnDespesaLista.Size = new System.Drawing.Size(233, 45);
             this.btnDespesaLista.TabIndex = 6;
-            this.btnDespesaLista.Text = "Listar Despesas";
+            this.btnDespesaLista.Text = "Lista de Despesas";
             this.btnDespesaLista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDespesaLista.UseVisualStyleBackColor = true;
             this.btnDespesaLista.Click += new System.EventHandler(this.btnDespesaLista_Click);
@@ -241,7 +241,7 @@ namespace View
             this.btnDespesaCadastro.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnDespesaCadastro.Size = new System.Drawing.Size(233, 45);
             this.btnDespesaCadastro.TabIndex = 5;
-            this.btnDespesaCadastro.Text = "Cadastrar";
+            this.btnDespesaCadastro.Text = "Cadastro";
             this.btnDespesaCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDespesaCadastro.UseVisualStyleBackColor = true;
             this.btnDespesaCadastro.Click += new System.EventHandler(this.btnDespesaCadastro_Click);
@@ -286,7 +286,7 @@ namespace View
             this.btnReceitaListaTotal.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnReceitaListaTotal.Size = new System.Drawing.Size(233, 45);
             this.btnReceitaListaTotal.TabIndex = 0;
-            this.btnReceitaListaTotal.Text = "Listar Total de Receita";
+            this.btnReceitaListaTotal.Text = "Total de Receita";
             this.btnReceitaListaTotal.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReceitaListaTotal.UseVisualStyleBackColor = true;
             this.btnReceitaListaTotal.Click += new System.EventHandler(this.btnReceitaListaTotal_Click);
@@ -302,7 +302,7 @@ namespace View
             this.btnReceitaLista.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnReceitaLista.Size = new System.Drawing.Size(233, 45);
             this.btnReceitaLista.TabIndex = 3;
-            this.btnReceitaLista.Text = "Listar Receitas";
+            this.btnReceitaLista.Text = "Lista de Receitas";
             this.btnReceitaLista.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReceitaLista.UseVisualStyleBackColor = true;
             this.btnReceitaLista.Click += new System.EventHandler(this.btnReceitaLista_Click);
@@ -318,7 +318,7 @@ namespace View
             this.btnReceitaCadastro.Padding = new System.Windows.Forms.Padding(35, 0, 0, 0);
             this.btnReceitaCadastro.Size = new System.Drawing.Size(233, 45);
             this.btnReceitaCadastro.TabIndex = 2;
-            this.btnReceitaCadastro.Text = "Cadastrar";
+            this.btnReceitaCadastro.Text = "Cadastro";
             this.btnReceitaCadastro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReceitaCadastro.UseVisualStyleBackColor = true;
             this.btnReceitaCadastro.Click += new System.EventHandler(this.btnReceitaCadastro_Click);
@@ -366,7 +366,7 @@ namespace View
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblTitulo.Location = new System.Drawing.Point(549, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(288, 14);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(86, 31);
             this.lblTitulo.TabIndex = 2;
@@ -411,7 +411,7 @@ namespace View
         private System.Windows.Forms.Button btnDespesaCadastro;
         private System.Windows.Forms.Button btnDespesa;
         private System.Windows.Forms.Panel pnlContaSubMenu;
-        private System.Windows.Forms.Button btnContaTransferiSaldo;
+        private System.Windows.Forms.Button btnContaTransfereSaldo;
         private System.Windows.Forms.Button btnContaListaSaldoTotal;
         private System.Windows.Forms.Button btnContaLista;
         private System.Windows.Forms.Button btnContaCadastro;
