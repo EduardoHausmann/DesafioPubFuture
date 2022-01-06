@@ -1,0 +1,9 @@
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\bin\Debug\Repository.dll
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\bin\Debug\Repository.pdb
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\bin\Debug\Modal.dll
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\bin\Debug\Modal.pdb
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\obj\Debug\Repository.dll
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Repository\obj\Debug\Repository.pdb

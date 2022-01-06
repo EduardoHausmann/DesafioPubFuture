@@ -1,0 +1,5 @@
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Modal\bin\Debug\Modal.dll
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Modal\bin\Debug\Modal.pdb
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Modal\obj\Debug\Modal.csproj.CoreCompileInputs.cache
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Modal\obj\Debug\Modal.dll
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\Modal\obj\Debug\Modal.pdb

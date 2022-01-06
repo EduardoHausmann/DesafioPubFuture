@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Conexao.cs" />
     <Compile Include="Interface\IConta.cs" />
     <Compile Include="Interface\IDespesa.cs" />
     <Compile Include="Interface\IReceita.cs" />

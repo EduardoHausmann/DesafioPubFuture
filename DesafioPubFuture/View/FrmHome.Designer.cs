@@ -29,7 +29,6 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             this.pnlMenuLateral = new System.Windows.Forms.Panel();
             this.btnSair = new System.Windows.Forms.Button();
             this.pnlContaSubMenu = new System.Windows.Forms.Panel();
@@ -49,7 +48,6 @@ namespace View
             this.btnReceitaCadastro = new System.Windows.Forms.Button();
             this.btnReceita = new System.Windows.Forms.Button();
             this.pnlTelaFilha = new System.Windows.Forms.Panel();
-            this.lblMenu = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.pnlMenuLateral.SuspendLayout();
             this.pnlContaSubMenu.SuspendLayout();
@@ -350,23 +348,12 @@ namespace View
             this.pnlTelaFilha.Size = new System.Drawing.Size(684, 500);
             this.pnlTelaFilha.TabIndex = 0;
             // 
-            // lblMenu
-            // 
-            this.lblMenu.AutoSize = true;
-            this.lblMenu.Image = ((System.Drawing.Image)(resources.GetObject("lblMenu.Image")));
-            this.lblMenu.Location = new System.Drawing.Point(256, 4);
-            this.lblMenu.Name = "lblMenu";
-            this.lblMenu.Size = new System.Drawing.Size(20, 17);
-            this.lblMenu.TabIndex = 1;
-            this.lblMenu.Text = "   ";
-            this.lblMenu.Click += new System.EventHandler(this.lblMenu_Click);
-            // 
             // lblTitulo
             // 
             this.lblTitulo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblTitulo.AutoSize = true;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.lblTitulo.Location = new System.Drawing.Point(288, 14);
+            this.lblTitulo.Location = new System.Drawing.Point(282, 14);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(86, 31);
             this.lblTitulo.TabIndex = 2;
@@ -378,12 +365,12 @@ namespace View
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 561);
-            this.Controls.Add(this.lblMenu);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.pnlTelaFilha);
             this.Controls.Add(this.pnlMenuLateral);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(950, 600);
             this.MinimumSize = new System.Drawing.Size(950, 600);
             this.Name = "FrmHome";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -418,8 +405,7 @@ namespace View
         private System.Windows.Forms.Button btnConta;
         private System.Windows.Forms.Panel pnlTelaFilha;
         private System.Windows.Forms.Button btnSair;
-        private System.Windows.Forms.Label lblMenu;
-        private System.Windows.Forms.Label lblTitulo;
+        public System.Windows.Forms.Label lblTitulo;
     }
 }
 

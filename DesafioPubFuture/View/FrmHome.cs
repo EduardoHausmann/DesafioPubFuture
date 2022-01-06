@@ -21,7 +21,8 @@ namespace View
 
         private void AbrirTelaFilha(Form telaFilha)
         {
-            if (ativarForm != null) ativarForm.Close();
+            if (ativarForm != null) 
+                ativarForm.Close();
             ativarForm = telaFilha;
             telaFilha.TopLevel = false;
             telaFilha.FormBorderStyle = FormBorderStyle.None;
@@ -40,21 +41,21 @@ namespace View
         #region Receita
         private void btnReceitaCadastro_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Cadastro de Receitas";
+            //lblTitulo.Text = "Cadastro de Receitas";
             FrmCadastroReceita cadastroReceita = new FrmCadastroReceita();
             AbrirTelaFilha(cadastroReceita);
         }
 
         private void btnReceitaLista_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Lista de Receitas";
+            //lblTitulo.Text = "Lista de Receitas";
             FrmListaReceita listaReceita = new FrmListaReceita();
             AbrirTelaFilha(listaReceita);
         }
 
         private void btnReceitaListaTotal_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Total de Receitas";
+            //lblTitulo.Text = "Total de Receitas";
             FrmTotalReceita totalReceita = new FrmTotalReceita();
             AbrirTelaFilha(totalReceita);
         }
@@ -63,21 +64,21 @@ namespace View
         #region Despesa
         private void btnDespesaCadastro_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Cadastro de Despesas";
+            //lblTitulo.Text = "Cadastro de Despesas";
             FrmCadastroDespesa cadastroDespesa = new FrmCadastroDespesa();
             AbrirTelaFilha(cadastroDespesa);
         }
 
         private void btnDespesaLista_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Lista de Despesas";
+            //lblTitulo.Text = "Lista de Despesas";
             FrmListaDespesa listaDespesa = new FrmListaDespesa();
             AbrirTelaFilha(listaDespesa);
         }
 
         private void btnDespesaListaTotal_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Total de Despesas"; 
+            //lblTitulo.Text = "Total de Despesas"; 
             FrmTotalDespesa totalDespesa = new FrmTotalDespesa();
             AbrirTelaFilha(totalDespesa);
         }
@@ -86,47 +87,31 @@ namespace View
         #region Conta
         private void btnContaCadastro_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Cadastro de Contas";
+            //lblTitulo.Text = "Cadastro de Contas";
             FrmCadastroConta cadastroConta = new FrmCadastroConta();
             AbrirTelaFilha(cadastroConta);
         }
 
         private void btnContaLista_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Lista de Contas";
+            //lblTitulo.Text = "Lista de Contas";
             FrmListaConta listaConta = new FrmListaConta();
             AbrirTelaFilha(listaConta);
         }
 
         private void btnContaListaSaldoTotal_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Saldo Total das Contas";
+            //lblTitulo.Text = "Saldo Total das Contas";
             FrmSaldoTotalConta saldoTotalConta = new FrmSaldoTotalConta();
             AbrirTelaFilha(saldoTotalConta);
         }
 
         private void btnContaTransferiSaldo_Click(object sender, EventArgs e)
         {
-            lblTitulo.Text = "Transferência de Saldo Entre Contas";
+            //lblTitulo.Text = "Transferência de Saldo Entre Contas";
             FrmTranfereSaldoConta tranfereSaldoConta = new FrmTranfereSaldoConta();
             AbrirTelaFilha(tranfereSaldoConta);
         }
         #endregion
-
-        private void lblMenu_Click(object sender, EventArgs e)
-        {
-            if (pnlMenuLateral.Visible == false)
-            {
-                pnlMenuLateral.Visible = true;
-                lblMenu.Location = new System.Drawing.Point(256, 4); 
-                this.lblTitulo.Location = new System.Drawing.Point(288, 14);
-            }
-            else
-            {
-                pnlMenuLateral.Visible = false;
-                lblMenu.Location = new System.Drawing.Point(8, 4);
-                this.lblTitulo.Location = new System.Drawing.Point(40, 14);
-            }
-        }
     }
 }
