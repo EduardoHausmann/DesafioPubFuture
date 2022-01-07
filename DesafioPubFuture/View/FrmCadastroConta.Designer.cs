@@ -29,8 +29,8 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
@@ -40,13 +40,13 @@ namespace View
             this.lblInstituicao = new System.Windows.Forms.Label();
             this.txtInstituicao = new System.Windows.Forms.TextBox();
             this.dgvConta = new System.Windows.Forms.DataGridView();
-            this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
             this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Saldo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoConta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.InstituicaoFinanceira = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvConta)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +101,7 @@ namespace View
             // 
             // cbTipoConta
             // 
+            this.cbTipoConta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTipoConta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoConta.FormattingEnabled = true;
             this.cbTipoConta.Items.AddRange(new object[] {
@@ -138,6 +139,7 @@ namespace View
             this.Saldo,
             this.TipoConta,
             this.InstituicaoFinanceira});
+            this.dgvConta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvConta.Location = new System.Drawing.Point(111, 231);
             this.dgvConta.Name = "dgvConta";
             this.dgvConta.ReadOnly = true;
@@ -146,6 +148,40 @@ namespace View
             this.dgvConta.Size = new System.Drawing.Size(454, 235);
             this.dgvConta.TabIndex = 0;
             this.dgvConta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConta_CellClick);
+            // 
+            // Id
+            // 
+            dataGridViewCellStyle1.NullValue = null;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Id.HeaderText = "Código";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 75;
+            // 
+            // Saldo
+            // 
+            dataGridViewCellStyle2.Format = "C2";
+            dataGridViewCellStyle2.NullValue = null;
+            this.Saldo.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Saldo.HeaderText = "Saldo";
+            this.Saldo.Name = "Saldo";
+            this.Saldo.ReadOnly = true;
+            this.Saldo.Width = 125;
+            // 
+            // TipoConta
+            // 
+            this.TipoConta.HeaderText = "Tipo de Conta";
+            this.TipoConta.Name = "TipoConta";
+            this.TipoConta.ReadOnly = true;
+            this.TipoConta.Width = 125;
+            // 
+            // InstituicaoFinanceira
+            // 
+            this.InstituicaoFinanceira.HeaderText = "Instituição Financeira";
+            this.InstituicaoFinanceira.Name = "InstituicaoFinanceira";
+            this.InstituicaoFinanceira.ReadOnly = true;
+            this.InstituicaoFinanceira.Width = 200;
             // 
             // btnSalvar
             // 
@@ -186,40 +222,6 @@ namespace View
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // Id
-            // 
-            dataGridViewCellStyle3.NullValue = null;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Id.HeaderText = "Código";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 75;
-            // 
-            // Saldo
-            // 
-            dataGridViewCellStyle4.Format = "C2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Saldo.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Saldo.HeaderText = "Saldo";
-            this.Saldo.Name = "Saldo";
-            this.Saldo.ReadOnly = true;
-            this.Saldo.Width = 125;
-            // 
-            // TipoConta
-            // 
-            this.TipoConta.HeaderText = "Tipo de Conta";
-            this.TipoConta.Name = "TipoConta";
-            this.TipoConta.ReadOnly = true;
-            this.TipoConta.Width = 125;
-            // 
-            // InstituicaoFinanceira
-            // 
-            this.InstituicaoFinanceira.HeaderText = "Instituição Financeira";
-            this.InstituicaoFinanceira.Name = "InstituicaoFinanceira";
-            this.InstituicaoFinanceira.ReadOnly = true;
-            this.InstituicaoFinanceira.Width = 200;
             // 
             // FrmCadastroConta
             // 

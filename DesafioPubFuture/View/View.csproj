@@ -133,6 +133,9 @@
     <EmbeddedResource Include="FrmCadastroConta.resx">
       <DependentUpon>FrmCadastroConta.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastroDespesa.resx">
+      <DependentUpon>FrmCadastroDespesa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCadastroReceita.resx">
       <DependentUpon>FrmCadastroReceita.cs</DependentUpon>
     </EmbeddedResource>

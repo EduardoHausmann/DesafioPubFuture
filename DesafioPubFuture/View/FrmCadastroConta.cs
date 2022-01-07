@@ -119,6 +119,8 @@ namespace View
                     repository = new ContaRepository();
                     repository.Apagar(id);
                 }
+                btnSalvar.Enabled = true;
+                btnEditar.Enabled = false;
             }
             Limpar();
             AtualizarTabela();

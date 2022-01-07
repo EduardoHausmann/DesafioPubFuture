@@ -37,7 +37,7 @@ namespace View
             lblId.Text = "0";
             txtDescricao.Clear();
             cbTipoReceita.SelectedIndex = -1;
-            cbConta.SelectedIndex = -1;
+            cbConta.SelectedIndex = 0;
             dtpRecebimento.Value = DateTime.Now.Date;
             dtpRecebimentoEsperado.Value = DateTime.Now.Date;
         }
@@ -120,8 +120,7 @@ namespace View
         private void btnEditar_Click(object sender, EventArgs e)
         {
             string tipo = Convert.ToString(cbTipoReceita.SelectedItem);
-            string conta = Convert.ToString(cbTipoReceita.SelectedItem);
-            if (mbValor.Text != "" && tipo != "" && txtDescricao.Text != "" && conta != "")
+            if (mbValor.Text != "" && tipo != "" && txtDescricao.Text != "")
             {
                 Alterar();
                 Limpar();
@@ -146,6 +145,8 @@ namespace View
                     repository = new ReceitaRepository();
                     repository.Apagar(id);
                 }
+                btnSalvar.Enabled = true;
+                btnEditar.Enabled = false;
             }
             Limpar();
             AtualizarTabela();
@@ -170,7 +171,6 @@ namespace View
             }
             btnSalvar.Enabled = false;
             btnEditar.Enabled = true;
-
         }
     }
 }

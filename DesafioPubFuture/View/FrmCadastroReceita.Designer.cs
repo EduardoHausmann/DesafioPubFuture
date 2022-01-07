@@ -29,14 +29,21 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.dgvReceita = new System.Windows.Forms.DataGridView();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblId = new System.Windows.Forms.Label();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblValor = new System.Windows.Forms.Label();
@@ -51,13 +58,6 @@ namespace View
             this.dtpRecebimentoEsperado = new System.Windows.Forms.DateTimePicker();
             this.cbConta = new System.Windows.Forms.ComboBox();
             this.lblConta = new System.Windows.Forms.Label();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReceita)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,7 +69,7 @@ namespace View
             this.btnExcluir.Location = new System.Drawing.Point(384, 209);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 35);
-            this.btnExcluir.TabIndex = 18;
+            this.btnExcluir.TabIndex = 9;
             this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
@@ -83,7 +83,7 @@ namespace View
             this.btnEditar.Location = new System.Drawing.Point(303, 210);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 35);
-            this.btnEditar.TabIndex = 17;
+            this.btnEditar.TabIndex = 8;
             this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
@@ -96,7 +96,7 @@ namespace View
             this.btnSalvar.Location = new System.Drawing.Point(222, 210);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 35);
-            this.btnSalvar.TabIndex = 16;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -114,6 +114,7 @@ namespace View
             this.tipo,
             this.Column2,
             this.Column3});
+            this.dgvReceita.Cursor = System.Windows.Forms.Cursors.Hand;
             this.dgvReceita.Location = new System.Drawing.Point(8, 255);
             this.dgvReceita.Name = "dgvReceita";
             this.dgvReceita.ReadOnly = true;
@@ -122,6 +123,64 @@ namespace View
             this.dgvReceita.Size = new System.Drawing.Size(664, 228);
             this.dgvReceita.TabIndex = 0;
             this.dgvReceita.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvReceita_CellClick);
+            // 
+            // Id
+            // 
+            dataGridViewCellStyle5.NullValue = null;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle5;
+            this.Id.HeaderText = "Código";
+            this.Id.Name = "Id";
+            this.Id.ReadOnly = true;
+            this.Id.Visible = false;
+            this.Id.Width = 75;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Conta";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = null;
+            this.Column5.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Column5.HeaderText = "Valor";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "Descrição";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Width = 125;
+            // 
+            // tipo
+            // 
+            this.tipo.HeaderText = "Tipo Receita";
+            this.tipo.Name = "tipo";
+            this.tipo.ReadOnly = true;
+            this.tipo.Width = 125;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle7.Format = "d";
+            dataGridViewCellStyle7.NullValue = null;
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Column2.HeaderText = "Data Receb.";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            dataGridViewCellStyle8.Format = "d";
+            dataGridViewCellStyle8.NullValue = null;
+            this.Column3.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Column3.HeaderText = "Data Receb. Esper.";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Width = 110;
             // 
             // lblId
             // 
@@ -174,6 +233,7 @@ namespace View
             // 
             // cbTipoReceita
             // 
+            this.cbTipoReceita.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbTipoReceita.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbTipoReceita.FormattingEnabled = true;
             this.cbTipoReceita.Items.AddRange(new object[] {
@@ -192,7 +252,7 @@ namespace View
             this.lblDescricao.Location = new System.Drawing.Point(75, 60);
             this.lblDescricao.Name = "lblDescricao";
             this.lblDescricao.Size = new System.Drawing.Size(71, 17);
-            this.lblDescricao.TabIndex = 19;
+            this.lblDescricao.TabIndex = 0;
             this.lblDescricao.Text = "Descrição";
             // 
             // txtDescricao
@@ -200,7 +260,7 @@ namespace View
             this.txtDescricao.Location = new System.Drawing.Point(75, 80);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(531, 23);
-            this.txtDescricao.TabIndex = 20;
+            this.txtDescricao.TabIndex = 3;
             // 
             // lblRecebimento
             // 
@@ -208,7 +268,7 @@ namespace View
             this.lblRecebimento.Location = new System.Drawing.Point(75, 110);
             this.lblRecebimento.Name = "lblRecebimento";
             this.lblRecebimento.Size = new System.Drawing.Size(145, 17);
-            this.lblRecebimento.TabIndex = 21;
+            this.lblRecebimento.TabIndex = 0;
             this.lblRecebimento.Text = "Data do Recebimento";
             // 
             // dtpRecebimento
@@ -217,7 +277,7 @@ namespace View
             this.dtpRecebimento.Location = new System.Drawing.Point(75, 130);
             this.dtpRecebimento.Name = "dtpRecebimento";
             this.dtpRecebimento.Size = new System.Drawing.Size(254, 23);
-            this.dtpRecebimento.TabIndex = 22;
+            this.dtpRecebimento.TabIndex = 4;
             // 
             // lblRecebimentoEsperado
             // 
@@ -225,7 +285,7 @@ namespace View
             this.lblRecebimentoEsperado.Location = new System.Drawing.Point(352, 110);
             this.lblRecebimentoEsperado.Name = "lblRecebimentoEsperado";
             this.lblRecebimentoEsperado.Size = new System.Drawing.Size(210, 17);
-            this.lblRecebimentoEsperado.TabIndex = 21;
+            this.lblRecebimentoEsperado.TabIndex = 0;
             this.lblRecebimentoEsperado.Text = "Data do Recebimento Esperado";
             // 
             // dtpRecebimentoEsperado
@@ -234,10 +294,11 @@ namespace View
             this.dtpRecebimentoEsperado.Location = new System.Drawing.Point(352, 130);
             this.dtpRecebimentoEsperado.Name = "dtpRecebimentoEsperado";
             this.dtpRecebimentoEsperado.Size = new System.Drawing.Size(254, 23);
-            this.dtpRecebimentoEsperado.TabIndex = 22;
+            this.dtpRecebimentoEsperado.TabIndex = 5;
             // 
             // cbConta
             // 
+            this.cbConta.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cbConta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbConta.FormattingEnabled = true;
             this.cbConta.Items.AddRange(new object[] {
@@ -245,7 +306,7 @@ namespace View
             this.cbConta.Location = new System.Drawing.Point(213, 179);
             this.cbConta.Name = "cbConta";
             this.cbConta.Size = new System.Drawing.Size(254, 24);
-            this.cbConta.TabIndex = 24;
+            this.cbConta.TabIndex = 6;
             // 
             // lblConta
             // 
@@ -253,66 +314,8 @@ namespace View
             this.lblConta.Location = new System.Drawing.Point(213, 159);
             this.lblConta.Name = "lblConta";
             this.lblConta.Size = new System.Drawing.Size(45, 17);
-            this.lblConta.TabIndex = 23;
+            this.lblConta.TabIndex = 0;
             this.lblConta.Text = "Conta";
-            // 
-            // Id
-            // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Id.HeaderText = "Código";
-            this.Id.Name = "Id";
-            this.Id.ReadOnly = true;
-            this.Id.Visible = false;
-            this.Id.Width = 75;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Conta";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Column5.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Column5.HeaderText = "Valor";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Descrição";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 125;
-            // 
-            // tipo
-            // 
-            this.tipo.HeaderText = "Tipo Receita";
-            this.tipo.Name = "tipo";
-            this.tipo.ReadOnly = true;
-            this.tipo.Width = 125;
-            // 
-            // Column2
-            // 
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Column2.HeaderText = "Data Receb.";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            dataGridViewCellStyle4.Format = "d";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Column3.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Column3.HeaderText = "Data Receb. Esper.";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 110;
             // 
             // FrmCadastroReceita
             // 

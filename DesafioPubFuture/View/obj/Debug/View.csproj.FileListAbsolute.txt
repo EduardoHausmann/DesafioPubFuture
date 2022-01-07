@@ -17,3 +17,4 @@ C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Deb
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.csproj.CopyComplete
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.exe
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.pdb
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.FrmCadastroDespesa.resources
