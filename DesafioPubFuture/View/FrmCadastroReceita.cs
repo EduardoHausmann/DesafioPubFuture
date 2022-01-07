@@ -48,7 +48,7 @@ namespace View
             repository = new ReceitaRepository();
             receita.Valor = Convert.ToDouble(mbValor.Text);
             receita.TipoReceita = Convert.ToString(cbTipoReceita.SelectedItem);
-            receita.Descricao = mbValor.Text;
+            receita.Descricao = txtDescricao.Text;
             receita.DataRecebimento = Convert.ToDateTime(dtpRecebimento.Value);
             receita.DataRecebimentoEsperado = Convert.ToDateTime(dtpRecebimentoEsperado.Value);
             receita.IdConta = Convert.ToInt32(cbConta.SelectedValue);
@@ -63,7 +63,7 @@ namespace View
             receita.Id = Convert.ToInt32(lblId.Text);
             receita.Valor = Convert.ToDouble(mbValor.Text);
             receita.TipoReceita = Convert.ToString(cbTipoReceita.SelectedItem);
-            receita.Descricao = mbValor.Text;
+            receita.Descricao = txtDescricao.Text;
             receita.DataRecebimento = Convert.ToDateTime(dtpRecebimento.Value);
             receita.DataRecebimentoEsperado = Convert.ToDateTime(dtpRecebimentoEsperado.Value);
             receita.IdConta = Convert.ToInt32(cbConta.SelectedValue);
@@ -126,6 +126,9 @@ namespace View
                 Alterar();
                 Limpar();
                 AtualizarTabela();
+
+                btnSalvar.Enabled = true;
+                btnEditar.Enabled = false;
             }
             else
             {
