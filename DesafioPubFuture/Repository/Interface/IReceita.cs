@@ -18,5 +18,9 @@ namespace Repository.Interface
         Receita ObterPeloId(int id);
 
         List<Receita> ObterTodos();
+
+        List<Receita> ObterPeloTipo(string tipo);
+
+        List<Receita> ObterPeloPeriodo(DateTime inicio, DateTime fim);
     }
 }

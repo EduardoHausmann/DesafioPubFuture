@@ -92,6 +92,82 @@ WHERE receitas.id = @Id";
             return receita;
         }
 
+        public List<Receita> ObterPeloPeriodo(DateTime inicio, DateTime fim)
+        {
+            cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
+receitas.valor AS 'ReceitaValor',
+receitas.descricao AS 'ReceitaDescricao',
+receitas.data_recebimento AS 'ReceitaRecebimento',
+receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
+receitas.tipo_receita AS 'ReceitaTipo',
+receitas.id_conta AS 'ReceitaIdConta',
+contas.instituicao_financeira as 'ContaFinanceira'
+FROM receitas 
+INNER JOIN contas ON (receitas.id_conta = contas.id)
+WHERE receitas.data_recebimento >= @RECEBIMENTO AND receitas.data_recebimento_esperado <= @RECEBIMENTO_ESPERADO";
+            cmd.Parameters.AddWithValue("@RECEBIMENTO", inicio);
+            cmd.Parameters.AddWithValue("@RECEBIMENTO_ESPERADO", fim);
+
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Receita> receitas = new List<Receita>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Receita receita = new Receita();
+                receita.Id = Convert.ToInt32(dr["ReceitaId"]);
+                receita.Valor = Convert.ToDouble(dr["ReceitaValor"]);
+                receita.Descricao = dr["ReceitaDescricao"].ToString();
+                receita.TipoReceita = dr["ReceitaTipo"].ToString();
+                receita.DataRecebimento = Convert.ToDateTime(dr["ReceitaRecebimento"]);
+                receita.DataRecebimentoEsperado = Convert.ToDateTime(dr["ReceitaRecebimentoEsperado"]);
+                receita.Conta = new Conta();
+                receita.Conta.InstituicaoFinanceira = dr["ContaFinanceira"].ToString();
+                receitas.Add(receita);
+            }
+            cmd.Connection.Close();
+            return receitas;
+        }
+
+        public List<Receita> ObterPeloTipo(string tipo)
+        {
+            cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
+receitas.valor AS 'ReceitaValor',
+receitas.descricao AS 'ReceitaDescricao',
+receitas.data_recebimento AS 'ReceitaRecebimento',
+receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
+receitas.tipo_receita AS 'ReceitaTipo',
+receitas.id_conta AS 'ReceitaIdConta',
+contas.instituicao_financeira as 'ContaFinanceira'
+FROM receitas 
+INNER JOIN contas ON (receitas.id_conta = contas.id)
+WHERE receitas.tipo_receita LIKE @TIPO";
+            tipo = $"%{tipo}%";
+            cmd.Parameters.AddWithValue("@TIPO", tipo);
+
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Receita> receitas = new List<Receita>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Receita receita = new Receita();
+                receita.Id = Convert.ToInt32(dr["ReceitaId"]);
+                receita.Valor = Convert.ToDouble(dr["ReceitaValor"]);
+                receita.Descricao = dr["ReceitaDescricao"].ToString();
+                receita.TipoReceita = dr["ReceitaTipo"].ToString();
+                receita.DataRecebimento = Convert.ToDateTime(dr["ReceitaRecebimento"]);
+                receita.DataRecebimentoEsperado = Convert.ToDateTime(dr["ReceitaRecebimentoEsperado"]);
+                receita.Conta = new Conta();
+                receita.Conta.InstituicaoFinanceira = dr["ContaFinanceira"].ToString();
+                receitas.Add(receita);
+            }
+            cmd.Connection.Close();
+            return receitas;
+        }
+
         public List<Receita> ObterTodos()
         {
             cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
