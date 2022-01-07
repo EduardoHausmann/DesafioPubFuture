@@ -39,7 +39,7 @@ namespace View
         {
             conta = new Conta();
             repository = new ContaRepository();
-            conta.Saldo = Convert.ToDouble(mbSaldo.Text);
+            conta.Saldo = Convert.ToDouble(mbSaldo.Text.Replace(".", ","));
             conta.TipoConta = Convert.ToString(cbTipoConta.SelectedItem);
             conta.InstituicaoFinanceira = txtInstituicao.Text;
 
@@ -51,7 +51,7 @@ namespace View
             conta = new Conta();
             repository = new ContaRepository();
             conta.Id = Convert.ToInt32(lblId.Text);
-            conta.Saldo = Convert.ToDouble(mbSaldo.Text);
+            conta.Saldo = Convert.ToDouble(mbSaldo.Text.Replace(".", ","));
             conta.TipoConta = Convert.ToString(cbTipoConta.SelectedItem);
             conta.InstituicaoFinanceira = txtInstituicao.Text;
 

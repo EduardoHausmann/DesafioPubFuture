@@ -20,7 +20,9 @@ namespace View
         public FrmListaReceita()
         {
             InitializeComponent();
+            AtualizarTabela();
             VerificaFiltro();
+            SugereData();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -30,17 +32,43 @@ namespace View
 
         private void VerificaFiltro()
         {
-            if(rbTipoReceita.Checked)
+            if (rbTipoReceita.Checked)
             {
                 dtpRecebimento.Enabled = false;
                 dtpRecebimentoEsperado.Enabled = false;
                 cbTipoReceita.Enabled = true;
             }
             else
-            {                
+            {
                 dtpRecebimento.Enabled = true;
                 dtpRecebimentoEsperado.Enabled = true;
                 cbTipoReceita.Enabled = false;
+                if (Convert.ToString(cbTipoReceita.SelectedItem) != "")
+                    cbTipoReceita.SelectedIndex = -1;
+            }
+        }
+
+        private void SugereData()
+        {
+            dtpRecebimento.Value = Convert.ToDateTime("01/01/2022");
+            dtpRecebimentoEsperado.Value = DateTime.Today;
+        }
+
+        private void AtualizarTabela()
+        {
+            receita = new Receita();
+            receita.Conta = new Conta();
+            repository = new ReceitaRepository();
+            List<Receita> receitas = repository.ObterTodos();
+
+            dgvReceita.RowCount = 0;
+            for (int i = 0; i < receitas.Count; i++)
+            {
+                receita = receitas[i];
+                dgvReceita.Rows.Add(new object[]
+                {
+                    receita.Id, receita.Conta.InstituicaoFinanceira, receita.Valor, receita.Descricao.ToString(), receita.TipoReceita.ToString(), receita.DataRecebimento, receita.DataRecebimentoEsperado
+                });
             }
         }
 
@@ -95,10 +123,20 @@ namespace View
 
         private void btnFiltro_Click(object sender, EventArgs e)
         {
+            if (Convert.ToString(cbTipoReceita.SelectedItem) == "" && rbTipoReceita.Checked)
+            {
+                MessageBox.Show("Selecione o Tipo de Receita a ser Filtrado!");
+                cbTipoReceita.Focus();
+                return;
+            }
+
             if (rbTipoReceita.Checked)
                 FiltroTipo();
             else
+            {
                 FiltroPeriodo();
+                SugereData();
+            }
         }
     }
 }

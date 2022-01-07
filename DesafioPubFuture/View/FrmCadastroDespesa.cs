@@ -24,6 +24,7 @@ namespace View
             InitializeComponent();
             CarregaComboConta();
             AtualizarTabela();
+            SugereData();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -41,11 +42,17 @@ namespace View
             dtpPagamentoEsperado.Value = DateTime.Now.Date;
         }
 
+        private void SugereData()
+        {
+            dtpPagamento.Value = Convert.ToDateTime("01/01/2022");
+            dtpPagamentoEsperado.Value = DateTime.Today;
+        }
+
         private void Inserir()
         {
             despesa = new Despesa();
             repository = new DespesaRepository();
-            despesa.Valor = Convert.ToDouble(mbValor.Text);
+            despesa.Valor = Convert.ToDouble(mbValor.Text.Replace(".", ","));
             despesa.TipoDespesa = Convert.ToString(cbTipoDespesa.SelectedItem);
             despesa.DataPagamento = Convert.ToDateTime(dtpPagamento.Value);
             despesa.DataPagamentoEsperado = Convert.ToDateTime(dtpPagamentoEsperado.Value);
@@ -59,7 +66,7 @@ namespace View
             despesa = new Despesa();
             repository = new DespesaRepository();
             despesa.Id = Convert.ToInt32(lblId.Text);
-            despesa.Valor = Convert.ToDouble(mbValor.Text);
+            despesa.Valor = Convert.ToDouble(mbValor.Text.Replace(".", ","));
             despesa.TipoDespesa = Convert.ToString(cbTipoDespesa.SelectedItem);
             despesa.DataPagamento = Convert.ToDateTime(dtpPagamento.Value);
             despesa.DataPagamentoEsperado = Convert.ToDateTime(dtpPagamentoEsperado.Value);
@@ -107,6 +114,7 @@ namespace View
                 Inserir();
                 Limpar();
                 AtualizarTabela();
+                SugereData();
             }
             else
             {
@@ -122,6 +130,7 @@ namespace View
                 Alterar();
                 Limpar();
                 AtualizarTabela();
+                SugereData();
 
                 btnSalvar.Enabled = true;
                 btnEditar.Enabled = false;
@@ -147,6 +156,7 @@ namespace View
             }
             Limpar();
             AtualizarTabela();
+            SugereData();
         }
 
         private void dgvDespesa_CellClick(object sender, DataGridViewCellEventArgs e)

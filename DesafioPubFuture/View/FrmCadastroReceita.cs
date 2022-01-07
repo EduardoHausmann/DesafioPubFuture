@@ -24,6 +24,7 @@ namespace View
             InitializeComponent();
             CarregaComboConta();
             AtualizarTabela();
+            SugereData();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -41,12 +42,18 @@ namespace View
             dtpRecebimento.Value = DateTime.Now.Date;
             dtpRecebimentoEsperado.Value = DateTime.Now.Date;
         }
+        
+        private void SugereData()
+        {
+            dtpRecebimento.Value = Convert.ToDateTime("01/01/2022");
+            dtpRecebimentoEsperado.Value = DateTime.Today;
+        }
 
         private void Inserir()
         {
             receita = new Receita();
             repository = new ReceitaRepository();
-            receita.Valor = Convert.ToDouble(mbValor.Text);
+            receita.Valor = Convert.ToDouble(mbValor.Text.Replace(".", ","));
             receita.TipoReceita = Convert.ToString(cbTipoReceita.SelectedItem);
             receita.Descricao = txtDescricao.Text;
             receita.DataRecebimento = Convert.ToDateTime(dtpRecebimento.Value);
@@ -61,7 +68,7 @@ namespace View
             receita = new Receita();
             repository = new ReceitaRepository();
             receita.Id = Convert.ToInt32(lblId.Text);
-            receita.Valor = Convert.ToDouble(mbValor.Text);
+            receita.Valor = Convert.ToDouble(mbValor.Text.Replace(".", ","));
             receita.TipoReceita = Convert.ToString(cbTipoReceita.SelectedItem);
             receita.Descricao = txtDescricao.Text;
             receita.DataRecebimento = Convert.ToDateTime(dtpRecebimento.Value);
@@ -110,6 +117,7 @@ namespace View
                 Inserir();
                 Limpar();
                 AtualizarTabela();
+                SugereData();
             }
             else
             {
@@ -125,6 +133,7 @@ namespace View
                 Alterar();
                 Limpar();
                 AtualizarTabela();
+                SugereData();
 
                 btnSalvar.Enabled = true;
                 btnEditar.Enabled = false;
@@ -150,6 +159,7 @@ namespace View
             }
             Limpar();
             AtualizarTabela();
+            SugereData();
         }
 
         private void dgvReceita_CellClick(object sender, DataGridViewCellEventArgs e)
