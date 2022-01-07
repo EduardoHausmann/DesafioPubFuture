@@ -29,8 +29,8 @@ namespace View
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSair = new System.Windows.Forms.Button();
             this.lblId = new System.Windows.Forms.Label();
             this.lblSaldo = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@ namespace View
             // lblSaldo
             // 
             this.lblSaldo.AutoSize = true;
-            this.lblSaldo.Location = new System.Drawing.Point(70, 50);
+            this.lblSaldo.Location = new System.Drawing.Point(70, 46);
             this.lblSaldo.Name = "lblSaldo";
             this.lblSaldo.Size = new System.Drawing.Size(44, 17);
             this.lblSaldo.TabIndex = 0;
@@ -85,7 +85,7 @@ namespace View
             // 
             // mbSaldo
             // 
-            this.mbSaldo.Location = new System.Drawing.Point(73, 71);
+            this.mbSaldo.Location = new System.Drawing.Point(73, 67);
             this.mbSaldo.Name = "mbSaldo";
             this.mbSaldo.Size = new System.Drawing.Size(239, 23);
             this.mbSaldo.TabIndex = 1;
@@ -93,7 +93,7 @@ namespace View
             // lblTipo
             // 
             this.lblTipo.AutoSize = true;
-            this.lblTipo.Location = new System.Drawing.Point(362, 50);
+            this.lblTipo.Location = new System.Drawing.Point(362, 46);
             this.lblTipo.Name = "lblTipo";
             this.lblTipo.Size = new System.Drawing.Size(97, 17);
             this.lblTipo.TabIndex = 0;
@@ -107,7 +107,7 @@ namespace View
             "Carteira",
             "Conta Corrente",
             "Poupança"});
-            this.cbTipoConta.Location = new System.Drawing.Point(365, 71);
+            this.cbTipoConta.Location = new System.Drawing.Point(365, 67);
             this.cbTipoConta.Name = "cbTipoConta";
             this.cbTipoConta.Size = new System.Drawing.Size(239, 24);
             this.cbTipoConta.TabIndex = 2;
@@ -115,7 +115,7 @@ namespace View
             // lblInstituicao
             // 
             this.lblInstituicao.AutoSize = true;
-            this.lblInstituicao.Location = new System.Drawing.Point(73, 118);
+            this.lblInstituicao.Location = new System.Drawing.Point(73, 114);
             this.lblInstituicao.Name = "lblInstituicao";
             this.lblInstituicao.Size = new System.Drawing.Size(141, 17);
             this.lblInstituicao.TabIndex = 0;
@@ -123,7 +123,7 @@ namespace View
             // 
             // txtInstituicao
             // 
-            this.txtInstituicao.Location = new System.Drawing.Point(73, 138);
+            this.txtInstituicao.Location = new System.Drawing.Point(73, 134);
             this.txtInstituicao.Name = "txtInstituicao";
             this.txtInstituicao.Size = new System.Drawing.Size(531, 23);
             this.txtInstituicao.TabIndex = 3;
@@ -138,12 +138,12 @@ namespace View
             this.Saldo,
             this.TipoConta,
             this.InstituicaoFinanceira});
-            this.dgvConta.Location = new System.Drawing.Point(73, 239);
+            this.dgvConta.Location = new System.Drawing.Point(111, 231);
             this.dgvConta.Name = "dgvConta";
             this.dgvConta.ReadOnly = true;
             this.dgvConta.RowHeadersVisible = false;
             this.dgvConta.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvConta.Size = new System.Drawing.Size(531, 224);
+            this.dgvConta.Size = new System.Drawing.Size(454, 235);
             this.dgvConta.TabIndex = 0;
             this.dgvConta.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvConta_CellClick);
             // 
@@ -152,7 +152,7 @@ namespace View
             this.btnSalvar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSalvar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.Location = new System.Drawing.Point(220, 194);
+            this.btnSalvar.Location = new System.Drawing.Point(220, 190);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 35);
             this.btnSalvar.TabIndex = 4;
@@ -166,7 +166,7 @@ namespace View
             this.btnEditar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditar.Enabled = false;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(301, 194);
+            this.btnEditar.Location = new System.Drawing.Point(301, 190);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(75, 35);
             this.btnEditar.TabIndex = 5;
@@ -179,7 +179,7 @@ namespace View
             this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnExcluir.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExcluir.Location = new System.Drawing.Point(382, 193);
+            this.btnExcluir.Location = new System.Drawing.Point(382, 189);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(75, 35);
             this.btnExcluir.TabIndex = 6;
@@ -189,18 +189,19 @@ namespace View
             // 
             // Id
             // 
-            dataGridViewCellStyle1.NullValue = null;
-            this.Id.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.NullValue = null;
+            this.Id.DefaultCellStyle = dataGridViewCellStyle3;
             this.Id.HeaderText = "Código";
             this.Id.Name = "Id";
             this.Id.ReadOnly = true;
+            this.Id.Visible = false;
             this.Id.Width = 75;
             // 
             // Saldo
             // 
-            dataGridViewCellStyle2.Format = "C2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Saldo.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Format = "C2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Saldo.DefaultCellStyle = dataGridViewCellStyle4;
             this.Saldo.HeaderText = "Saldo";
             this.Saldo.Name = "Saldo";
             this.Saldo.ReadOnly = true;

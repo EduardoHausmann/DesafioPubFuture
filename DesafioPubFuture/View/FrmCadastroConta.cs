@@ -102,6 +102,7 @@ namespace View
             else
             {
                 MessageBox.Show("Preencha todos os campos!");
+                Limpar();
             }
 
             btnSalvar.Enabled = true;
@@ -110,11 +111,14 @@ namespace View
 
         private void btnExcluir_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Deseja realmente Apagar?", "AVISO!", MessageBoxButtons.YesNo) == DialogResult.Yes) 
+            if (dgvConta.RowCount > 0)
             {
-                int id = Convert.ToInt32(dgvConta.CurrentRow.Cells[0].Value);
-                repository = new ContaRepository();
-                repository.Apagar(id);
+                if (MessageBox.Show("Deseja realmente Apagar?", "AVISO!", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                    int id = Convert.ToInt32(dgvConta.CurrentRow.Cells[0].Value);
+                    repository = new ContaRepository();
+                    repository.Apagar(id);
+                }
             }
             Limpar();
             AtualizarTabela();
