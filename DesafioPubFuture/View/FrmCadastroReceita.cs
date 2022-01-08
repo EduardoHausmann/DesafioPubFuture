@@ -45,7 +45,7 @@ namespace View
         
         private void SugereData()
         {
-            dtpRecebimento.Value = Convert.ToDateTime("01/01/2022");
+            dtpRecebimento.Value = Convert.ToDateTime("01/01/" + DateTime.Now.Year);
             dtpRecebimentoEsperado.Value = DateTime.Today;
         }
 

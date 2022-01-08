@@ -44,7 +44,7 @@ namespace View
 
         private void SugereData()
         {
-            dtpPagamento.Value = Convert.ToDateTime("01/01/2022");
+            dtpPagamento.Value = Convert.ToDateTime("01/01/" + DateTime.Now.Year);
             dtpPagamentoEsperado.Value = DateTime.Today;
         }
 
