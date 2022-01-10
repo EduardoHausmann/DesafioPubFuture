@@ -57,16 +57,16 @@ namespace Repository.Repositories
         public Receita ObterPeloId(int id)
         {
             cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
-receitas.valor AS 'ReceitaValor',
-receitas.descricao AS 'ReceitaDescricao',
-receitas.data_recebimento AS 'ReceitaRecebimento',
-receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
-receitas.tipo_receita AS 'ReceitaTipo',
-receitas.id_conta AS 'ReceitaIdConta',
-contas.instituicao_financeira as 'ContaFinanceira'
-FROM receitas 
-INNER JOIN contas ON (receitas.id_conta = contas.id)
-WHERE receitas.id = @Id";
+            receitas.valor AS 'ReceitaValor',
+            receitas.descricao AS 'ReceitaDescricao',
+            receitas.data_recebimento AS 'ReceitaRecebimento',
+            receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
+            receitas.tipo_receita AS 'ReceitaTipo',
+            receitas.id_conta AS 'ReceitaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM receitas 
+            INNER JOIN contas ON (receitas.id_conta = contas.id)
+            WHERE receitas.id = @Id";
             cmd.Parameters.AddWithValue("@ID", id);
 
             DataTable dt = new DataTable();
@@ -95,16 +95,16 @@ WHERE receitas.id = @Id";
         public List<Receita> ObterPeloPeriodo(DateTime inicio, DateTime fim)
         {
             cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
-receitas.valor AS 'ReceitaValor',
-receitas.descricao AS 'ReceitaDescricao',
-receitas.data_recebimento AS 'ReceitaRecebimento',
-receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
-receitas.tipo_receita AS 'ReceitaTipo',
-receitas.id_conta AS 'ReceitaIdConta',
-contas.instituicao_financeira as 'ContaFinanceira'
-FROM receitas 
-INNER JOIN contas ON (receitas.id_conta = contas.id)
-WHERE receitas.data_recebimento >= @RECEBIMENTO AND receitas.data_recebimento_esperado <= @RECEBIMENTO_ESPERADO";
+            receitas.valor AS 'ReceitaValor',
+            receitas.descricao AS 'ReceitaDescricao',
+            receitas.data_recebimento AS 'ReceitaRecebimento',
+            receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
+            receitas.tipo_receita AS 'ReceitaTipo',
+            receitas.id_conta AS 'ReceitaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM receitas 
+            INNER JOIN contas ON (receitas.id_conta = contas.id)
+            WHERE receitas.data_recebimento BETWEEN @RECEBIMENTO AND @RECEBIMENTO_ESPERADO AND receitas.data_recebimento_esperado BETWEEN @RECEBIMENTO AND @RECEBIMENTO_ESPERADO";
             cmd.Parameters.AddWithValue("@RECEBIMENTO", inicio);
             cmd.Parameters.AddWithValue("@RECEBIMENTO_ESPERADO", fim);
 
@@ -133,16 +133,16 @@ WHERE receitas.data_recebimento >= @RECEBIMENTO AND receitas.data_recebimento_es
         public List<Receita> ObterPeloTipo(string tipo)
         {
             cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
-receitas.valor AS 'ReceitaValor',
-receitas.descricao AS 'ReceitaDescricao',
-receitas.data_recebimento AS 'ReceitaRecebimento',
-receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
-receitas.tipo_receita AS 'ReceitaTipo',
-receitas.id_conta AS 'ReceitaIdConta',
-contas.instituicao_financeira as 'ContaFinanceira'
-FROM receitas 
-INNER JOIN contas ON (receitas.id_conta = contas.id)
-WHERE receitas.tipo_receita LIKE @TIPO";
+            receitas.valor AS 'ReceitaValor',
+            receitas.descricao AS 'ReceitaDescricao',
+            receitas.data_recebimento AS 'ReceitaRecebimento',
+            receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
+            receitas.tipo_receita AS 'ReceitaTipo',
+            receitas.id_conta AS 'ReceitaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM receitas 
+            INNER JOIN contas ON (receitas.id_conta = contas.id)
+            WHERE receitas.tipo_receita LIKE @TIPO";
             tipo = $"%{tipo}%";
             cmd.Parameters.AddWithValue("@TIPO", tipo);
 
@@ -171,15 +171,15 @@ WHERE receitas.tipo_receita LIKE @TIPO";
         public List<Receita> ObterTodos()
         {
             cmd.CommandText = @"SELECT receitas.id AS 'ReceitaId',
-receitas.valor AS 'ReceitaValor',
-receitas.descricao AS 'ReceitaDescricao',
-receitas.data_recebimento AS 'ReceitaRecebimento',
-receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
-receitas.tipo_receita AS 'ReceitaTipo',
-receitas.id_conta AS 'ReceitaIdConta',
-contas.instituicao_financeira as 'ContaFinanceira'
-FROM receitas 
-INNER JOIN contas ON (receitas.id_conta = contas.id)";
+            receitas.valor AS 'ReceitaValor',
+            receitas.descricao AS 'ReceitaDescricao',
+            receitas.data_recebimento AS 'ReceitaRecebimento',
+            receitas.data_recebimento_esperado AS 'ReceitaRecebimentoEsperado',
+            receitas.tipo_receita AS 'ReceitaTipo',
+            receitas.id_conta AS 'ReceitaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM receitas 
+            INNER JOIN contas ON (receitas.id_conta = contas.id)";
             DataTable dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
 

@@ -35,8 +35,8 @@ namespace View
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnSair = new System.Windows.Forms.Button();
             this.gbFiltro = new System.Windows.Forms.GroupBox();
-            this.rbPeriodo = new System.Windows.Forms.RadioButton();
             this.rbTipoReceita = new System.Windows.Forms.RadioButton();
+            this.rbPeriodo = new System.Windows.Forms.RadioButton();
             this.cbTipoReceita = new System.Windows.Forms.ComboBox();
             this.lblTipo = new System.Windows.Forms.Label();
             this.dtpRecebimentoEsperado = new System.Windows.Forms.DateTimePicker();
@@ -81,18 +81,6 @@ namespace View
             this.gbFiltro.TabStop = false;
             this.gbFiltro.Text = "Filtrar Por:";
             // 
-            // rbPeriodo
-            // 
-            this.rbPeriodo.AutoSize = true;
-            this.rbPeriodo.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.rbPeriodo.Location = new System.Drawing.Point(139, 22);
-            this.rbPeriodo.Name = "rbPeriodo";
-            this.rbPeriodo.Size = new System.Drawing.Size(75, 21);
-            this.rbPeriodo.TabIndex = 0;
-            this.rbPeriodo.Text = "Periodo";
-            this.rbPeriodo.UseVisualStyleBackColor = true;
-            this.rbPeriodo.CheckedChanged += new System.EventHandler(this.rbPeriodo_CheckedChanged);
-            // 
             // rbTipoReceita
             // 
             this.rbTipoReceita.AutoSize = true;
@@ -106,6 +94,18 @@ namespace View
             this.rbTipoReceita.Text = "Tipo de Receita";
             this.rbTipoReceita.UseVisualStyleBackColor = true;
             this.rbTipoReceita.CheckedChanged += new System.EventHandler(this.rbTipoReceita_CheckedChanged);
+            // 
+            // rbPeriodo
+            // 
+            this.rbPeriodo.AutoSize = true;
+            this.rbPeriodo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbPeriodo.Location = new System.Drawing.Point(139, 22);
+            this.rbPeriodo.Name = "rbPeriodo";
+            this.rbPeriodo.Size = new System.Drawing.Size(75, 21);
+            this.rbPeriodo.TabIndex = 0;
+            this.rbPeriodo.Text = "Periodo";
+            this.rbPeriodo.UseVisualStyleBackColor = true;
+            this.rbPeriodo.CheckedChanged += new System.EventHandler(this.rbPeriodo_CheckedChanged);
             // 
             // cbTipoReceita
             // 
@@ -252,7 +252,7 @@ namespace View
             this.btnFiltro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFiltro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFiltro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFiltro.Location = new System.Drawing.Point(597, 77);
+            this.btnFiltro.Location = new System.Drawing.Point(599, 77);
             this.btnFiltro.Name = "btnFiltro";
             this.btnFiltro.Size = new System.Drawing.Size(75, 35);
             this.btnFiltro.TabIndex = 11;
@@ -277,7 +277,7 @@ namespace View
             this.Controls.Add(this.gbFiltro);
             this.Controls.Add(this.btnSair);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmListaReceita";
             this.gbFiltro.ResumeLayout(false);
             this.gbFiltro.PerformLayout();

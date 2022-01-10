@@ -142,6 +142,9 @@
     <EmbeddedResource Include="FrmHome.resx">
       <DependentUpon>FrmHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmListaDespesa.resx">
+      <DependentUpon>FrmListaDespesa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmListaReceita.resx">
       <DependentUpon>FrmListaReceita.cs</DependentUpon>
     </EmbeddedResource>

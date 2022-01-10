@@ -19,3 +19,4 @@ C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Deb
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.pdb
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.FrmCadastroDespesa.resources
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.FrmListaReceita.resources
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Debug\View.FrmListaDespesa.resources

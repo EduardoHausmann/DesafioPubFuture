@@ -37,6 +37,7 @@ namespace View
                 dtpRecebimento.Enabled = false;
                 dtpRecebimentoEsperado.Enabled = false;
                 cbTipoReceita.Enabled = true;
+                SugereData();
             }
             else
             {

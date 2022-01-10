@@ -55,15 +55,15 @@ namespace Repository.Repositories
         public Despesa ObterPeloId(int id)
         {
             cmd.CommandText = @"SELECT despesas.id AS 'DespesaId',
-despesas.valor AS 'DespesaValor',
-despesas.data_pagamento AS 'DespesaPagamento',
-despesas.data_pagamento_esperado AS 'DespesaPagamentoEsperado',
-despesas.tipo_despesa AS 'DespesaTipo',
-despesas.id_conta AS 'DespesaIdConta',
-contas.instituicao_financeira as 'ContaFinanceira'
-FROM despesas 
-INNER JOIN contas ON (despesas.id_conta = contas.id)
-WHERE despesas.id = @Id";
+            despesas.valor AS 'DespesaValor',
+            despesas.data_pagamento AS 'DespesaPagamento',
+            despesas.data_pagamento_esperado AS 'DespesaPagamentoEsperado',
+            despesas.tipo_despesa AS 'DespesaTipo',
+            despesas.id_conta AS 'DespesaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM despesas 
+            INNER JOIN contas ON (despesas.id_conta = contas.id)
+            WHERE despesas.id = @Id";
             cmd.Parameters.AddWithValue("@ID", id);
 
             DataTable dt = new DataTable();
@@ -88,17 +88,91 @@ WHERE despesas.id = @Id";
             return despesa;
         }
 
+        public List<Despesa> ObterPeloPeriodo(DateTime inicio, DateTime fim)
+        {
+            cmd.CommandText = @"SELECT despesas.id AS 'DespesaId',
+            despesas.valor AS 'DespesaValor',
+            despesas.data_pagamento AS 'DespesaPagamento',
+            despesas.data_pagamento_esperado AS 'DespesaPagamentoEsperado',
+            despesas.tipo_despesa AS 'DespesaTipo',
+            despesas.id_conta AS 'DespesaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM despesas 
+            INNER JOIN contas ON (despesas.id_conta = contas.id)
+            WHERE despesas.data_pagamento BETWEEN @PAGAMENTO AND @PAGAMENTO_ESPERADO AND despesas.data_pagamento_esperado BETWEEN @PAGAMENTO AND @PAGAMENTO_ESPERADO";
+            cmd.Parameters.AddWithValue("@PAGAMENTO", inicio);
+            cmd.Parameters.AddWithValue("@PAGAMENTO_ESPERADO", fim);
+
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Despesa> despesas = new List<Despesa>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Despesa despesa = new Despesa();
+                despesa.Id = Convert.ToInt32(dr["DespesaId"]);
+                despesa.IdConta = Convert.ToInt32(dr["DespesaIdConta"]);
+                despesa.Valor = Convert.ToDouble(dr["DespesaValor"]);
+                despesa.TipoDespesa = dr["DespesaTipo"].ToString();
+                despesa.DataPagamento = Convert.ToDateTime(dr["DespesaPagamento"]);
+                despesa.DataPagamentoEsperado = Convert.ToDateTime(dr["DespesaPagamentoEsperado"]);
+                despesa.Conta = new Conta();
+                despesa.Conta.InstituicaoFinanceira = dr["ContaFinanceira"].ToString();
+                despesas.Add(despesa);
+            }
+            cmd.Connection.Close();
+            return despesas;
+        }
+
+        public List<Despesa> ObterPeloTipo(string tipo)
+        {
+            cmd.CommandText = @"SELECT despesas.id AS 'DespesaId',
+            despesas.valor AS 'DespesaValor',
+            despesas.data_pagamento AS 'DespesaPagamento',
+            despesas.data_pagamento_esperado AS 'DespesaPagamentoEsperado',
+            despesas.tipo_despesa AS 'DespesaTipo',
+            despesas.id_conta AS 'DespesaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM despesas 
+            INNER JOIN contas ON (despesas.id_conta = contas.id)
+            WHERE despesas.tipo_despesa LIKE @TIPO";
+            tipo = $"%{tipo}%";
+            cmd.Parameters.AddWithValue("@TIPO", tipo);
+
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Despesa> despesas = new List<Despesa>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Despesa despesa = new Despesa();
+                despesa.Id = Convert.ToInt32(dr["DespesaId"]);
+                despesa.IdConta = Convert.ToInt32(dr["DespesaIdConta"]);
+                despesa.Valor = Convert.ToDouble(dr["DespesaValor"]);
+                despesa.TipoDespesa = dr["DespesaTipo"].ToString();
+                despesa.DataPagamento = Convert.ToDateTime(dr["DespesaPagamento"]);
+                despesa.DataPagamentoEsperado = Convert.ToDateTime(dr["DespesaPagamentoEsperado"]);
+                despesa.Conta = new Conta();
+                despesa.Conta.InstituicaoFinanceira = dr["ContaFinanceira"].ToString();
+                despesas.Add(despesa);
+            }
+            cmd.Connection.Close();
+            return despesas;
+        }
+
         public List<Despesa> ObterTodos()
         {
             cmd.CommandText = @"SELECT despesas.id AS 'DespesaId',
-despesas.valor AS 'DespesaValor',
-despesas.data_pagamento AS 'DespesaPagamento',
-despesas.data_pagamento_esperado AS 'DespesaPagamentoEsperado',
-despesas.tipo_despesa AS 'DespesaTipo',
-despesas.id_conta AS 'DespesaIdConta',
-contas.instituicao_financeira as 'ContaFinanceira'
-FROM despesas 
-INNER JOIN contas ON (despesas.id_conta = contas.id)";
+            despesas.valor AS 'DespesaValor',
+            despesas.data_pagamento AS 'DespesaPagamento',
+            despesas.data_pagamento_esperado AS 'DespesaPagamentoEsperado',
+            despesas.tipo_despesa AS 'DespesaTipo',
+            despesas.id_conta AS 'DespesaIdConta',
+            contas.instituicao_financeira as 'ContaFinanceira'
+            FROM despesas 
+            INNER JOIN contas ON (despesas.id_conta = contas.id)";
             DataTable dt = new DataTable();
             dt.Load(cmd.ExecuteReader());
 
