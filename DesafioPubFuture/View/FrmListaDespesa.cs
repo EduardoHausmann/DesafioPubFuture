@@ -132,7 +132,10 @@ namespace View
             }
 
             if (rbTipoDespesa.Checked)
+            {
                 FiltroTipo();
+                cbTipoDespesa.SelectedIndex = -1;
+            }
             else
             {
                 FiltroPeriodo();

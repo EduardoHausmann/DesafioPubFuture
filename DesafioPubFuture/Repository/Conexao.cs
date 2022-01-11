@@ -14,8 +14,8 @@ namespace Repository
         public static SqlCommand Conecta()
         {
             string caminho = Path.GetDirectoryName(System.AppDomain.CurrentDomain.BaseDirectory.ToString());
-            string caminho2 = caminho.Remove(caminho.LastIndexOf("\\"));
-            string caminho3 = caminho2.Remove(caminho2.LastIndexOf("\\"));
+            caminho = caminho.Remove(caminho.LastIndexOf("\\"));
+            caminho = caminho.Remove(caminho.LastIndexOf("\\"));
             SqlConnection conexao = new SqlConnection();
             conexao.ConnectionString = $@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={caminho}\AppData\Database.mdf;Integrated Security=True";
             conexao.Open();

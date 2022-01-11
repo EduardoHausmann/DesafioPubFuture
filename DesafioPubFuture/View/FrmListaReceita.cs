@@ -132,7 +132,10 @@ namespace View
             }
 
             if (rbTipoReceita.Checked)
+            {
                 FiltroTipo();
+                cbTipoReceita.SelectedIndex = -1;
+            }
             else
             {
                 FiltroPeriodo();
