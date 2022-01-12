@@ -151,6 +151,18 @@
     <EmbeddedResource Include="FrmListaReceita.resx">
       <DependentUpon>FrmListaReceita.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSaldoTotalConta.resx">
+      <DependentUpon>FrmSaldoTotalConta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTotalDespesa.resx">
+      <DependentUpon>FrmTotalDespesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTotalReceita.resx">
+      <DependentUpon>FrmTotalReceita.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTranfereSaldoConta.resx">
+      <DependentUpon>FrmTranfereSaldoConta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

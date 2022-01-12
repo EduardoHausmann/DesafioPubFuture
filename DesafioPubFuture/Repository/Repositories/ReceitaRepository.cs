@@ -201,5 +201,10 @@ namespace Repository.Repositories
             cmd.Connection.Close();
             return receitas;
         }
+
+        public List<Receita> ObterTotalReceita()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

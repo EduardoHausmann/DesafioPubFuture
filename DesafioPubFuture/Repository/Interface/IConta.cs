@@ -13,10 +13,14 @@ namespace Repository.Interface
 
         bool Alterar(Conta conta);
 
+        bool TransferirSaldo(Conta contaOrigem, Conta contaDestino);
+
         bool Apagar(int id);
 
         Conta ObterPeloId(int id);
 
         List<Conta> ObterTodos();
+
+        List<Conta> ObterSaldoTotal();
     }
 }

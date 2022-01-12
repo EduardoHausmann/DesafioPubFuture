@@ -71,6 +71,11 @@ namespace Repository.Repositories
             return conta;
         }
 
+        public List<Conta> ObterSaldoTotal()
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Conta> ObterTodos()
         {
             cmd.CommandText = @"SELECT * FROM contas";
@@ -90,6 +95,11 @@ namespace Repository.Repositories
             }
             cmd.Connection.Close();
             return contas;
+        }
+
+        public bool TransferirSaldo(Conta contaOrigem, Conta contaDestino)
+        {
+            throw new NotImplementedException();
         }
     }
 }

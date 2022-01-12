@@ -19,6 +19,8 @@ namespace Repository.Interface
 
         List<Despesa> ObterTodos();
 
+        List<Despesa> ObterTotalDespesa();
+
         List<Despesa> ObterPeloTipo(string tipo);
 
         List<Despesa> ObterPeloPeriodo(DateTime inicio, DateTime fim);

@@ -194,5 +194,10 @@ namespace Repository.Repositories
             cmd.Connection.Close();
             return despesas;
         }
+
+        public List<Despesa> ObterTotalDespesa()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
