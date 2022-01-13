@@ -13,7 +13,7 @@ namespace Repository.Interface
 
         bool Alterar(Conta conta);
 
-        bool TransferirSaldo(Conta contaOrigem, Conta contaDestino);
+        void TransferirSaldo(int idOrigem, int idDestino, double saldoOrigem, double saldoDestino);
 
         bool Apagar(int id);
 

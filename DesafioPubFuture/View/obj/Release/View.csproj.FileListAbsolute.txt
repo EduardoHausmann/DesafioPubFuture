@@ -21,3 +21,7 @@ C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Rel
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmListaReceita.resources
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmListaDespesa.resources
 C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmListaConta.resources
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmSaldoTotalConta.resources
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmTotalDespesa.resources
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmTotalReceita.resources
+C:\Users\Eduardo\Documents\GitHub\DesafioPubFuture\DesafioPubFuture\View\obj\Release\View.FrmTranfereSaldoConta.resources

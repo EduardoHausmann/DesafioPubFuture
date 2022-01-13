@@ -97,9 +97,21 @@ namespace Repository.Repositories
             return contas;
         }
 
-        public bool TransferirSaldo(Conta contaOrigem, Conta contaDestino)
+        public void TransferirSaldo(int idOrigem, int idDestino, double saldoOrigem, double saldoDestino)
         {
-            throw new NotImplementedException();
+            SqlCommand cmdTranf = Conexao.Conecta();
+            cmd.CommandText = @"UPDATE contas SET saldo = @SALDO WHERE id = @ID";
+            cmd.Parameters.AddWithValue("@ID", idOrigem);
+            cmd.Parameters.AddWithValue("@SALDO", saldoOrigem);
+
+            cmdTranf.CommandText = @"UPDATE contas SET saldo = @SALDO WHERE id = @ID";
+            cmdTranf.Parameters.AddWithValue("@ID", idDestino);
+            cmdTranf.Parameters.AddWithValue("@SALDO", saldoDestino);
+
+            cmd.ExecuteNonQuery();
+            cmdTranf.ExecuteNonQuery();
+            cmd.Connection.Close();
+            return;
         }
     }
 }

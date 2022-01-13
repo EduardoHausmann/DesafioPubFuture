@@ -108,9 +108,9 @@ namespace View
 
         private void btnContaTransferiSaldo_Click(object sender, EventArgs e)
         {
-            //lblTitulo.Text = "Transferência de Saldo Entre Contas";
+            
             FrmTranfereSaldoConta tranfereSaldoConta = new FrmTranfereSaldoConta();
-            AbrirTelaFilha(tranfereSaldoConta);
+            tranfereSaldoConta.ShowDialog();
         }
         #endregion
     }
