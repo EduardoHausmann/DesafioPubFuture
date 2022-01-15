@@ -204,7 +204,20 @@ namespace Repository.Repositories
 
         public List<Receita> ObterTotalReceita()
         {
-            throw new NotImplementedException();
+            cmd.CommandText = @"SELECT SUM(valor) AS 'Total' FROM receitas";
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Receita> receitas = new List<Receita>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Receita receita = new Receita();
+                receita.Valor += Convert.ToDouble(dr["Total"]);
+                receitas.Add(receita);
+            }
+            cmd.Connection.Close();
+            return receitas;
         }
     }
 }

@@ -197,7 +197,20 @@ namespace Repository.Repositories
 
         public List<Despesa> ObterTotalDespesa()
         {
-            throw new NotImplementedException();
+            cmd.CommandText = @"SELECT SUM(valor) AS 'Total' FROM despesas";
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Despesa> despesas = new List<Despesa>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Despesa despesa = new Despesa();
+                despesa.Valor += Convert.ToDouble(dr["Total"]);
+                despesas.Add(despesa);
+            }
+            cmd.Connection.Close();
+            return despesas;
         }
     }
 }

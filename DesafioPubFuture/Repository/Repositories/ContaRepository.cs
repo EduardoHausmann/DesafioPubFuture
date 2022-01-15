@@ -73,7 +73,20 @@ namespace Repository.Repositories
 
         public List<Conta> ObterSaldoTotal()
         {
-            throw new NotImplementedException();
+            cmd.CommandText = @"SELECT SUM(saldo) AS 'SaldoTotal' FROM contas";
+            DataTable dt = new DataTable();
+            dt.Load(cmd.ExecuteReader());
+
+            List<Conta> contas = new List<Conta>();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                Conta conta = new Conta();
+                conta.Saldo += Convert.ToDouble(dr["SaldoTotal"]);
+                contas.Add(conta);
+            }
+            cmd.Connection.Close();
+            return contas;
         }
 
         public List<Conta> ObterTodos()
