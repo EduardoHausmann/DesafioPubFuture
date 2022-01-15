@@ -1,5 +1,8 @@
 # DesafioPubFuture
 
+Caso o sistema de problema ao executar por causa do BD, é necessario abrir o projeto no Visual Studio, selecionar o Database.mdf com dois clicks no seguinte caminho:
+..\DesafioPubFuture\DesafioPubFuture\View\AppData\Database.mdf
+
 **HOME**
    - Dentro da tela de Home, são chamadas quase todas as telas do sistema, tendo como unica execeção a tela de Transferencia.
 
