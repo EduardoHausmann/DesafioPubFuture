@@ -126,9 +126,7 @@ namespace View
         {
             if (Convert.ToString(cbTipoReceita.SelectedItem) == "" && rbTipoReceita.Checked)
             {
-                MessageBox.Show("Selecione o Tipo de Receita a ser Filtrado!");
-                cbTipoReceita.Focus();
-                return;
+                AtualizarTabela();
             }
 
             if (rbTipoReceita.Checked)

@@ -126,9 +126,7 @@ namespace View
         {
             if (Convert.ToString(cbTipoDespesa.SelectedItem) == "" && rbTipoDespesa.Checked)
             {
-                MessageBox.Show("Selecione o Tipo de Receita a ser Filtrado!");
-                cbTipoDespesa.Focus();
-                return;
+                AtualizarTabela();
             }
 
             if (rbTipoDespesa.Checked)

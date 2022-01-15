@@ -44,15 +44,16 @@ namespace View
             double destino = Convert.ToDouble(mbSaldoDestino.Text.Replace(".", ","));
             double valor = Convert.ToDouble(mbValor.Text);
 
-            if (valor > 0)
-                if ((valor < origem) && (idDestino != idOrigem))
-                {
-                    origem -= Convert.ToDouble(mbValor.Text.Replace(".", ","));
-                    destino += Convert.ToDouble(mbValor.Text.Replace(".", ","));
+            if (MessageBox.Show("Proceguir com a Transferencia?", "Question!", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                if (valor > 0)
+                    if ((valor < origem) && (idDestino != idOrigem))
+                    {
+                        origem -= Convert.ToDouble(mbValor.Text.Replace(".", ","));
+                        destino += Convert.ToDouble(mbValor.Text.Replace(".", ","));
 
-                    repository.TransferirSaldo(idOrigem, idDestino, origem, destino);
-                    Limpa();
-                }
+                        repository.TransferirSaldo(idOrigem, idDestino, origem, destino);
+                        Limpa();
+                    }
         }
 
         private void CarregaComboContaOrigem()
