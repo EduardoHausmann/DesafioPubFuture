@@ -2,12 +2,6 @@
 using Repository.Repositories;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
@@ -35,7 +29,7 @@ namespace View
             cbTipoConta.SelectedIndex = -1;
         }
 
-        private void Inserir() 
+        private void Inserir()
         {
             conta = new Conta();
             repository = new ContaRepository();
@@ -46,7 +40,7 @@ namespace View
             repository.Inserir(conta);
         }
 
-        private void Alterar() 
+        private void Alterar()
         {
             conta = new Conta();
             repository = new ContaRepository();

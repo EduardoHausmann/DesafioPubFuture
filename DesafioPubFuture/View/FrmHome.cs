@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
@@ -21,7 +14,7 @@ namespace View
 
         private void AbrirTelaFilha(Form telaFilha)
         {
-            if (ativarForm != null) 
+            if (ativarForm != null)
                 ativarForm.Close();
             ativarForm = telaFilha;
             telaFilha.TopLevel = false;
@@ -108,7 +101,7 @@ namespace View
 
         private void btnContaTransferiSaldo_Click(object sender, EventArgs e)
         {
-            
+            //lblTitulo.Text = "Transferencia de Saldo entre Contas";
             FrmTranfereSaldoConta tranfereSaldoConta = new FrmTranfereSaldoConta();
             tranfereSaldoConta.ShowDialog();
         }

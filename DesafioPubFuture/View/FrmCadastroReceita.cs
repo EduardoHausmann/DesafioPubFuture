@@ -3,13 +3,8 @@ using Repository;
 using Repository.Repositories;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace View
@@ -42,7 +37,7 @@ namespace View
             dtpRecebimento.Value = DateTime.Now.Date;
             dtpRecebimentoEsperado.Value = DateTime.Now.Date;
         }
-        
+
         private void SugereData()
         {
             dtpRecebimento.Value = Convert.ToDateTime("01/01/" + DateTime.Now.Year);
